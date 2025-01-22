@@ -15,13 +15,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-YJ-rsh">
+                                <rect key="frame" x="16" y="99" width="361" height="309.66666666666669"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="96v-5J-BJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlAction" destination="BYZ-38-t0r" eventType="valueChanged" id="mNp-dH-xet"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myp-yA-lyr">
+                                        <rect key="frame" x="0.0" y="71" width="361" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ID9-Bh-btN">
+                                        <rect key="frame" x="-2" y="131.33333333333334" width="365" height="31"/>
+                                        <connections>
+                                            <action selector="sliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="pdx-VH-T8f"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m27-pF-JTB">
+                                        <rect key="frame" x="0.0" y="201.33333333333331" width="361" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-aR-2TO">
+                                        <rect key="frame" x="0.0" y="275.33333333333331" width="361" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mzr-aY-cUr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dvC-YJ-rsh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DBA-Df-P4k"/>
+                            <constraint firstItem="dvC-YJ-rsh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="e2E-EV-iTg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dvC-YJ-rsh" secondAttribute="trailing" constant="16" id="gK8-D5-9WW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="myp-yA-lyr" id="Hdg-RA-t37"/>
+                        <outlet property="segmentedControl" destination="96v-5J-BJb" id="18X-UI-hMh"/>
+                        <outlet property="slider" destination="ID9-Bh-btN" id="zvs-H8-CEI"/>
+                        <outlet property="textField" destination="m27-pF-JTB" id="BNc-Gi-ycp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="-38"/>
+            <point key="canvasLocation" x="-515" y="-78"/>
         </scene>
     </scenes>
     <resources>
